@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
    
-   var points;
+   var points = 0;
    var startButton = document.getElementById("start");
     startButton.onclick = function turnRed() {
        
@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
            redSquare.style.backgroundColor = "powderblue";
            redSquare.removeAttribute("id");
            points = points + 1;
+           console.log(points);
            
-           
+           turnRed();
        };
             
     };
