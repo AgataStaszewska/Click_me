@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-
+   
+   var points;
    var startButton = document.getElementById("start");
-
-    startButton.onclick = function turnRed(){
+    startButton.onclick = function turnRed() {
        
        var allSquares = [];
        var square = document.getElementsByClassName("btn");
@@ -14,13 +14,25 @@ document.addEventListener("DOMContentLoaded", function() {
        }
        
        var squareNumber = Math.floor((Math.random() * square.length) + 1);
-       var squareTurnRed = allSquares[squareNumber];
-       squareTurnRed.style.backgroundColor = "red";
-       startButton.disabled = true; 
-        
+       var squareTurnedRed = allSquares[squareNumber];
+       squareTurnedRed.style.backgroundColor = "red";
+       squareTurnedRed.id = "red";
+       startButton.disabled = true;
+       
+       var redSquare = document.getElementById("red");
+       
+       redSquare.onclick = function clickedRed() {
+           
+           redSquare.style.backgroundColor = "powderblue";
+           redSquare.removeAttribute("id");
+           points = points + 1;
+           
+           
+       };
+            
     };
    
-   
+
    
    
    
