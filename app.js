@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
            
        }
        
-       var squareNumber = Math.floor((Math.random() * square.length) + 1);
+       var squareNumber = Math.floor((Math.random() * square.length));
        var squareTurnedRed = allSquares[squareNumber];
        squareTurnedRed.style.backgroundColor = "red";
        squareTurnedRed.id = "red";
-       startButton.disabled = true;
+//       startButton.disabled = true;
        
        var redSquare = document.getElementById("red");
        
@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", function() {
            
            var redSquare = document.getElementById("red");
            clearTimeout(initialTimeout);
-           seconds = seconds - 1000;
+           seconds = seconds - 300;
            
            redSquare.style.backgroundColor = "powderblue";
            redSquare.removeAttribute("id");
            points = points + 1;
-           console.log(seconds);
+           console.log(squareNumber);
            
            turnRed();
        };
