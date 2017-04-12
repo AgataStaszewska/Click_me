@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
    var points = 0;
    var startButton = document.getElementById("start");
    var initialTimeout;
-   var seconds = 10000;
+//   var seconds = 30000; //COMMENT FOR 2ND VERSION
+   
+   //SECOND VERSION: JUST 1 SEC FOR EACH CLICK!
+   var seconds = 1000; //UNCOMMENT FOR 2ND VERSION
     startButton.onclick = function turnRed() {
         
        initialTimeout = setTimeout(function() {alert("Game over! You've got "+points+" point(s)!");}, seconds);
@@ -21,20 +24,18 @@ document.addEventListener("DOMContentLoaded", function() {
        var squareTurnedRed = allSquares[squareNumber];
        squareTurnedRed.style.backgroundColor = "red";
        squareTurnedRed.id = "red";
-//       startButton.disabled = true;
+       startButton.disabled = true;
        
        var redSquare = document.getElementById("red");
        
        redSquare.onclick = function clickedRed() {
            
            var redSquare = document.getElementById("red");
-           clearTimeout(initialTimeout);
-           seconds = seconds - 300;
-           
+           clearTimeout(initialTimeout); //UNCOMMENT FOR 2ND VERSION
+         
            redSquare.style.backgroundColor = "powderblue";
            redSquare.removeAttribute("id");
            points = points + 1;
-           console.log(squareNumber);
            
            turnRed();
        };
