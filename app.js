@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
    
+   //TO DO: remove second game over alert
+   
    var points = 0;
    var startButton = document.getElementById("start");
    var initialTimeout;
-//   var seconds = 30000; //COMMENT FOR 2ND VERSION
+   var seconds = 30000; //COMMENT FOR 2ND VERSION
    
    //SECOND VERSION: JUST 1 SEC FOR EACH CLICK!
 //   var seconds = 1000; //UNCOMMENT FOR 2ND VERSION
