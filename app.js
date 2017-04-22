@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //   var seconds = 30000; //COMMENT FOR 2ND VERSION
    
    //SECOND VERSION: JUST 1 SEC FOR EACH CLICK!
-   var seconds = 1000; //UNCOMMENT FOR 2ND VERSION
+//   var seconds = 1000; //UNCOMMENT FOR 2ND VERSION
     startButton.onclick = function turnRed() {
         
        initialTimeout = setTimeout(function() {alert("Game over! You've got "+points+" point(s)!");}, seconds);
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
        redSquare.onclick = function clickedRed() {
            
            var redSquare = document.getElementById("red");
-           clearTimeout(initialTimeout); //UNCOMMENT FOR 2ND VERSION
+//           clearTimeout(initialTimeout); //UNCOMMENT FOR 2ND VERSION
          
            redSquare.style.backgroundColor = "powderblue";
            redSquare.removeAttribute("id");
